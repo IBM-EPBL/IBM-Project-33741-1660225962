@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image:url('/static/image/fruit.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-overflow: ellipsis;
+  overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+  background-color:#ecf3e5;
+  overflow: scroll;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 70px;
+  background: #373b69;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.in{
+  margin-top: 25px;
+  margin-left: 15px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+a:hover{
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+
+h2{
+  position: relative;
+  bottom: 20px;
+  left:600px;
+  color: white;
+}
+#c-head{
+  font-size: 20px;
+  position: absolute;
+  top: 25%;
+  left: 62%;
+  color: rgb(14, 9, 9);
+  margin-top: 20px;
+  border:5px solid black;
+  padding: 30px;
+  width: 500px;
+  background-color: lightblue;
+  border-radius: 15px;
+  color: #00010b;
+  box-shadow: 5px 5px 5px  #373b69;
+}
+h3{
+  font-size: 22px;
+  position:absolute;
+  left:1100px;
+  top:150px;
+}
+.img-pre{
+  width: 300px;
+  min-height: 100px;
+  border: 2px solid grey;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #00010b;
+}
+.img-pre-img{
+  display: none;
+  width: 100%;
+}
+button{
+  margin-top: 20px;
+  border: 2px solid black;
+  background-color: #373b69;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: white;
+  color: blueviolet;
+  font-weight: bold;
+}
+table{
+  margin: 15px;
+  border-collapse: collapse;
+}
+td,th{
+  border: 2px solid lightseagreen;
+  padding: 8px;
+}
+
+
+#c-head-c{
+  font-size: 20px;
+  position: absolute;
+  top: 25%;
+  left: 62%;
+  color: rgb(14, 9, 9);
+  margin: auto;
+  border:5px solid black;
+  padding: 30px;
+  width: 500px;
+  background-color: lightblue;
+  border-radius: 15px;
+  color: #00010b;
+  box-shadow: 5px 5px 5px  #373b69;
+}
