@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/home.css') }}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="../javascript/function_all.js"></script>
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+     <title>Image Classified</title>
+   </head>
+<body>
+  <nav id="navv">
+      <div class="in">
+          <a href="{{url_for('home')}}">Home</a>
+          <a href="{{url_for('classify')}}">Classify</a>  
+      </div>
+      <h2>Nutrition Fruits Image Classfier</h2>
+  </nav>
+  <div>
+    <h3>Image Classified</h3>
+  </div>
+        <div id="c-head-c">
+              <h4>Food Classified as: {{showcase1}}</h4>
+              <table>
+                <tr>
+                  <th>Nutrition</th>
+                  <th>Grams</th>
+                </tr>
+                <tr>
+                  <td>Sugar</td>
+                  <td>{{showcase[0]["sugar_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Fiber</td>
+                  <td>{{showcase[0]["fiber_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Serving size</td>
+                  <td>{{showcase[0]["serving_size_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Sodium</td>
+                  <td>{{showcase[0]["sodium_mg"]}}</td>
+                </tr>
+                <tr>
+                  <td>Potassium</td>
+                  <td>{{showcase[0]["potassium_mg"]}}</td>
+                </tr>
+                <tr>
+                  <td>Saturated Fat</td>
+                  <td>{{showcase[0]["fat_saturated_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Total Fat</td>
+                  <td>{{showcase[0]["fat_total_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Calories</td>
+                  <td>{{showcase[0]["calories"]}}</td>
+                </tr>
+                <tr>
+                  <td>Cholesterol</td>
+                  <td>{{showcase[0]["cholesterol_mg"]}}</td>
+                </tr>
+                <tr>
+                  <td>Protein</td>
+                  <td>{{showcase[0]["protein_g"]}}</td>
+                </tr>
+                <tr>
+                  <td>Total Carbohydrates</td>
+                  <td>{{showcase[0]["carbohydrates_total_g"]}}</td>
+                </tr>
+              </table>
+              
+            </div>
+  
+</body>
+      <script>
+            const inpFile=document.getElementById("inpFile");
+            const precontainer=document.getElementById("imgpre");
+            const preImage=precontainer.querySelector(".img-pre-img");
+            const previewDef=precontainer.querySelector(".img-def");
+            inpFile.addEventListener("change",function(){
+              const file=this.files[0];
+              if(file){
+                const reader=new FileReader();
+                previewDef.style.display="none";
+                preImage.style.display="block";
+                reader.addEventListener("load",function(){
+                  preImage.setAttribute("src",this.result);
+                });
+                reader.readAsDataURL(file);
+              }
+              else{
+                previewDef.style.display=null;
+                preImage.style.display=null;
+              }
+            })
+      </script>
+</html>
